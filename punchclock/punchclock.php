@@ -148,7 +148,10 @@ $PAGE_CONTENT_HEADER = "$office_title$select_offices$select_groups";
 
 include 'header.php';
 print "<div id=\"message\">Synchronizing, Please Wait...</div>\n";
+
 include 'time.php';
+print "<div align='right'><a href='timecard.php'>Time Card</a></div>\n";
 include 'punchclock_display.php';
 include 'footer.php';
 ?>
+

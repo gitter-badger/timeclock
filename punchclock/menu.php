@@ -4,7 +4,7 @@
  *
  * Display menu of punchclocks for each office and main timeclock page.
  */
-
+header("Location: punchclock.php");
 $current_page = "menu.php";
 
 session_start();
@@ -92,3 +92,4 @@ End_Of_HTML;
 </ul>
 
 <?php include 'footer.php'; ?>
+

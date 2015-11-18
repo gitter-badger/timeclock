@@ -18,8 +18,8 @@ username and password information!
               --- $db_name is the mysql database you created during the install. */
 
 $db_hostname = "localhost";
-$db_username = "timeclock";
-$db_password = "P4ssw0rd1!";
+$db_username = "root";
+$db_password = "Team@0930766151";
 $db_name = "timeclock";
 
 
@@ -40,7 +40,7 @@ $db_prefix = "";
    blank will cause PHP Timeclock to reject everyone attempting to connect to it.
    Default is "no". */
 
-$restrict_ips = "no";
+$restrict_ips = "yes";
 
 
 /* Insert the networks or ip addresses you wish to allow to connect to PHP Timeclock
@@ -62,7 +62,7 @@ $restrict_ips = "no";
    example --> $allowed_networks = array("10.0.0.4","192.168.1.[11-20]","192.168.4.0/24","192.0.0.0/8");
 */
 
-$allowed_networks = array();
+$allowed_networks = array("52.69.227.29");
 
 
 /* Choose "yes" if you want to disable the Edit System Settings page within PHP 
@@ -78,7 +78,7 @@ $disable_sysedit = "no";
    "yes" or "no". If "yes" is chosen, users will be required to enter a password
    whenever they change their status. Default is "no". */
 
-$use_passwd = "yes";
+$use_passwd = "no";
 
 
 /* If you only want certain users to have the ability to view and run the reports, 
@@ -97,7 +97,7 @@ $ip_logging = "yes";
 /* An email address to display in the footer (footer.php). Set it to "none" to ignore
    this option. */
 
-$email = "none";
+$email = "us@mobagel.com";
 
 
 /* --- OPTIONAL CHANGES --- */
@@ -150,19 +150,19 @@ $calendar_style = "amer";
                 5) g:iA
                 6) g:ia    */
 
-$timefmt = "g:ia";
+$timefmt = "G:i";
 
 
 /* Display only activity for the the current day instead of the last entry from each user.
    Default is "no". */
 
-$display_current_users = "no";
+$display_current_users = "yes";
 
 
 /* Show a Display Name instead of a Username for each user on the main page.
    Default is "no". */
 
-$show_display_name = "no";
+$show_display_name = "yes";
 
 
 /* Display punch-in/out times for only a certain office on the main page of the application.
@@ -180,13 +180,13 @@ $display_group = "all";
 /* Display a column on the main page that shows the office each person is affiliated with. 
    Default is "no". */
 
-$display_office_name = "no";
+$display_office_name = "yes";
 
 
 /* Display a column on the main page that shows the group each person is affiliated with. 
    Default is "no". */
 
-$display_group_name = "no";
+$display_group_name = "yes";
 
 
 /* A logo or graphic, this is displayed in the top left of each page.
@@ -315,10 +315,8 @@ $use_client_tz = "no";
 
 
 /* To display the punch-in/out times in the timezone of the web server, leave this option set
-   to "yes". If using PHP 5.1+ then leave this as-is, to change the time zone please use
-   date.timezone in your php.ini. Leaving date.timezone unset may cause PHP to choose the 
-   wrong timezone. Setting this option to "yes" will display the punch-in/out times according 
-   to the timezone through date("Z"). The default setting is "no". */
+   to "yes". Setting this option to "no" AND setting the above $use_client_tz option to "no",
+   will display the punch-in/out times in GMT. Default is "yes". */
 
 $use_server_tz = "no";
 
@@ -348,19 +346,14 @@ $metar = "CYYT";
    the ICAO used above. The max length for this field is 100 characters.
    If $display_weather is set to "no", this option is ignored. */
 
-$city = "St. Johns, NL, Canada";
-
-
-/* Display weather in US or metric measurements. Options are "f" or "c". Default is "c" */
-
-$weather_units = "c";
+$city = "Taipei, Taiwan";
 
 
 /* --- APP NAME, VERSION NUMBER, ETC. --- */
 
 
-$app_name = "PHP Timeclock";
-$app_version = "1.04";
+$app_name = "MoBagel Timeclock";
+$app_version = "";
 
 /* Sets the title in the header. This is what the page will be named by default when you
    make a "favorite" or "bookmark" in your browser. Change as you see fit. */
@@ -369,6 +362,7 @@ $title = "$app_name $app_version";
 
 
 /* --- DO NOT CHANGE ANYTHING BELOW THIS LINE!!! --- */
+
 
 $dbversion = "1.4";
 ?>
