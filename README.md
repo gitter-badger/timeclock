@@ -1,6 +1,8 @@
 About
 =====
 
+[![Join the chat at https://gitter.im/kevin830222/timeclock](https://badges.gitter.im/kevin830222/timeclock.svg)](https://gitter.im/kevin830222/timeclock?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This project is PHP Timeclock v1.04 with the Punchclock v0.8 add-on already installed.
 
 
